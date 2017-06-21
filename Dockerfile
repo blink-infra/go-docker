@@ -7,5 +7,7 @@ FROM golang:1.8.3
 RUN apt-get update && \
     apt-get install -y \
     --no-install-recommends \
-    awscli \
+    python3-pip \
     && rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install awscli
